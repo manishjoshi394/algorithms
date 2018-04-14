@@ -1,5 +1,8 @@
 # algorithms
-This repository contains common algorithms implemented in Java, Most algos have different implementations. I have put all these in one place as a revision repo for myself and others too.
+This repository contains common algorithms implemented in Java, Most algos have different implementations. I have put all these in one place as a revision repo for myself and others too. 
+
+The aim of the repository is to give a quick collection of optimised and less cluttered Algorithms classes for Java.
+Any corrections are always Welcome !
 
 The repository actually consists of my work in implementation of common algorithms as a part of Algorithms Part 1 course on Coursera by Princeton University. I have added assignments done by me to this repo too.
 I have not synced any build files to this repo.
