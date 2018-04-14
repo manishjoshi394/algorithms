@@ -15,7 +15,7 @@
  */
 package sort.merge;
 
-import sort.insertion.Insertion;
+import sort.insertion.*;
 
 /**
  *This is a Faster version of MergeSort and has a CUTOFF applied on size of array,
@@ -41,10 +41,18 @@ public class MergeFast {
     {
         if (low < high)
         {  
+            if (high - low + 1 <= CUTOFF)    // Do Insertion sort when number of items are less than or equal to CUTOFF
+            {
+                Insertion.sort(arr, low, high);
+                return ;
+            } 
+            
             int mid = low + (high - low) / 2;
             sort(aux, arr, low, mid);
-            sort(aux, arr, mid + 1, high);
-            merge(aux, arr, low, mid, high);
+            sort(aux, arr, mid + 1, high);   // switching thee roles of Auxiliary and Input array in each recursion step
+            if (less(arr[mid], arr[mid + 1])) 
+                return;    // Skip the merge if the two halves are already in order
+            merge(aux, arr, low, mid, high);  // make sure that the output array of biggest merge opration is the 'arr' array
         }
     }
     private static void merge(Comparable[] arr, Comparable[] aux, int low, int mid, int high)
