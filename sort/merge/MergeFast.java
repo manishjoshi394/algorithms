@@ -29,7 +29,7 @@ public class MergeFast {
      */
     public final static int CUTOFF = 7;
     
-    static void sort(Comparable[] arr)  // overloaded for trivial use
+    public static void sort(Comparable[] arr)  // overloaded for trivial use
     {
         Comparable[] aux = new Comparable[arr.length];
         for (int i = 0; i < arr.length; ++i)
@@ -37,7 +37,7 @@ public class MergeFast {
         sort(arr, aux, 0, arr.length - 1);
     }
     
-    public static void sort(Comparable[] arr, Comparable[] aux, int low, int high) 
+    private static void sort(Comparable[] arr, Comparable[] aux, int low, int high) 
     {
         if (low < high)
         {  
