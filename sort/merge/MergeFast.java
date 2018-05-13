@@ -37,7 +37,7 @@ public class MergeFast {
         sort(arr, aux, 0, arr.length - 1);
     }
     
-    private static void sort(Comparable[] arr, Comparable[] aux, int low, int high) 
+    public static void sort(Comparable[] arr, Comparable[] aux, int low, int high) 
     {
         if (low < high)
         {  
