@@ -16,7 +16,7 @@
 package sort.heap;
 
 import java.io.File; // Just used for the Main function where
-// i demonstrated use of the sort to order the files in a directory
+            // i demonstrated use of the sort to order the files in a directory
 
 /**
  * The class is a typical and classical Heap sort implementation using the sink
