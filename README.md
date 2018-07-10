@@ -4,7 +4,7 @@ This repository contains common algorithms implemented in Java for easy import i
 The aim of the repository is to give a quick collection of optimised and less cluttered Algorithms classes for Java.
 Any corrections are always Welcome !
 
-The repository actually consists of my work in implementation of common algorithms as a part of Algorithms Part 1 course on Coursera by Princeton University. I have added assignments done by me to this repo too.
+The repository actually consists of my work in implementation of common algorithms as a part of Algorithms Part 1 and Part 2 course on Coursera by Princeton University. I have added assignments done by me to this repo too.
 I have not synced any build files of IDE to this repo.
 
 Some dependencies are based on cs.algs4.princeton.edu library (download here - https://algs4.cs.princeton.edu/code/algs4.jar), you can import the package to get the required classes.
