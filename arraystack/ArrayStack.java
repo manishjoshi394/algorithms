@@ -19,6 +19,7 @@ import java.util.Scanner;
 import java.util.Iterator;
 import java.lang.Iterable;
 /**
+ * Stack collection implementied using resizing array to give better amortized cost.
  *
  * @author manishjoshi394
  * @param <Item> the generic data type for stack implementation
