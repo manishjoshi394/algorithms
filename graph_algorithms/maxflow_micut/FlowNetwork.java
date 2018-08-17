@@ -16,7 +16,7 @@ public class FlowNetwork {
 
     private final int V;            // the number of the vertices
     private int E;                  // the number of the Edges
-    private Bag<FlowEdge>[] adj;    // the adjacency list
+    private final Bag<FlowEdge>[] adj;    // the adjacency list
 
     /**
      * Empty V-vertex flow vertex.
@@ -80,8 +80,43 @@ public class FlowNetwork {
      * @param v the tail vertex
      * @return the edges pointing from v
      */
-    Iterable<FlowEdge> adj(int v) {
+    public Iterable<FlowEdge> adj(int v) {
         validateVertex(v);
         return adj[v];
+    }
+
+    /**
+     * Returns all the edges in this Network.
+     *
+     * @return all the edges in this Network
+     */
+    public Iterable<FlowEdge> edges() {
+        Bag<FlowEdge> b = new Bag<>();
+        for (int v = 0; v < V; ++v) {
+            for (FlowEdge e : adj(v)) {
+                if (e.to() != v) {
+                    b.add(e);
+                }
+            }
+        }
+        return b;
+    }
+
+    // for unit testing of the class
+    public static void main(String[] args) {
+        int V = 5;
+        int s = 0, t = V - 1;
+        FlowNetwork G = new FlowNetwork(V);
+        G.addEdge(new FlowEdge(0, 1, 2));
+        G.addEdge(new FlowEdge(0, 2, 10));
+        G.addEdge(new FlowEdge(0, 3, 3));
+        G.addEdge(new FlowEdge(1, 4, 10));
+        G.addEdge(new FlowEdge(2, 4, 1));
+        G.addEdge(new FlowEdge(3, 4, 10));
+
+        for (FlowEdge e : G.edges()) {
+            System.out.println(e);
+        }
+
     }
 }

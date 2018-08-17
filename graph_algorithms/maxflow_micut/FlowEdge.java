@@ -57,7 +57,7 @@ public class FlowEdge {
         if (!(flow >= 0.0)) {
             throw new IllegalArgumentException("Flow must be Non-Negative");
         }
-        this.flow = 0.0;
+        this.flow = flow;
     }
 
     /**
@@ -79,16 +79,18 @@ public class FlowEdge {
     }
 
     /**
-     * Returns the vertex other than v.
+     * Returns the vertex other than given vertex.
      *
-     * @param v the vertex provided
-     * @return the vertex other than v
+     * @param vertex the vertex provided
+     * @return the vertex other than given vertex
      */
-    public int other(int v) {
-        if (v == this.v) {
+    public int other(int vertex) {
+        if (vertex == this.v) {
             return w;
-        } else {
+        } else if (vertex == this.w) {
             return v;
+        } else {
+            throw new IllegalArgumentException("Inconsistent Vertex");
         }
     }
 
@@ -160,5 +162,6 @@ public class FlowEdge {
     // for unit testing of the class
     public static void main(String[] args) {
         FlowEdge e = new FlowEdge(0, 1, 10);
+        System.out.println(e.other(0));
     }
 }
