@@ -8,8 +8,6 @@ package graph_algorithms.maxflow_micut;
 import edu.princeton.cs.algs4.StdOut;
 import java.util.LinkedList;
 import java.util.Queue;
-//import edu.princeton.cs.algs4.FlowEdge;
-//import edu.princeton.cs.algs4.FlowNetwork;
 
 /**
  * The class implements Ford-Fulkerson Algorithm for solving Maxflow-Mincut
@@ -96,7 +94,7 @@ public class FordFulkerson {
         return marked[v];
     }
 
-    // Unit tester for the class+
+    // Unit tester for the class
     public static void main(String[] args) {
 
         // create flow network with V vertices and E edges
