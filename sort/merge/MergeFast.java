@@ -65,7 +65,7 @@ public class MergeFast {
                 aux[low + i] = arr[y++];
             else if (y > high)
                 aux[low + i] = arr[x++];
-            else if (less(arr[y], arr[x]))
+           else if (less(arr[y], arr[x]))
                 aux[low + i] = arr[y++];
             else aux[low + i] = arr[x++];
         }
