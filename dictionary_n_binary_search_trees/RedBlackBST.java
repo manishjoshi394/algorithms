@@ -78,7 +78,7 @@ public class RedBlackBST<Key extends Comparable<Key>, Value>
     public void put(Key key, Value value)
     {
         root = put(root, key, value);
-        root.color = RED;
+        root.color = BLACK;
     }
     
     /**
